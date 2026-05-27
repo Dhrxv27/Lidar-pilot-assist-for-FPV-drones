@@ -4,14 +4,23 @@
 
 ---
 
-## 📹 Demo
+## 📹 Flight Demo
 
 https://github.com/Dhrxv27/Lidar-pilot-assist-for-FPV-drones/raw/main/demo_college.mp4
+
+---
+
+## 🎤 Project Presentation
+
+https://github.com/Dhrxv27/Lidar-pilot-assist-for-FPV-drones/raw/main/project_explanation.mp4
+
+*Presented at department seminar — visual walkthrough of system architecture, sensor fusion logic, and results.*
+
 ---
 
 ## 🔍 Overview
 
-Traditional FPV drones rely entirely on pilot visual feedback for obstacle avoidance, creating significant risk in GPS-denied or low-visibility environments. This project implements an onboard pilot-assist system that provides real-time proximity alerts using a sensor fusion approach — combining LiDAR and ultrasonic sensing with threshold-based decision logic on a lightweight embedded platform.
+Traditional FPV drones rely entirely on pilot visual feedback for obstacle avoidance, creating significant risk in GPS-denied or low-visibility environments. This project implements an onboard pilot-assist system that provides real-time proximity alerts using a sensor fusion approach — combining LiDAR and ultrasonic sensing with graduated threshold-based decision logic on a lightweight embedded platform.
 
 ---
 
@@ -29,9 +38,11 @@ Traditional FPV drones rely entirely on pilot visual feedback for obstacle avoid
 
 ## 💻 Software Stack
 
-- Arduino C++ — sensor fusion and alert logic
+- Arduino C++ — sensor fusion and graduated alert logic
+- Rolling average filter for noise reduction
+- Dual-threshold system: WARNING (50cm) and CRITICAL (20cm)
+- Proportional buzzer response — faster alerts as obstacle proximity increases
 - Betaflight / INAV — flight controller configuration
-- Threshold-based sensor fusion algorithm
 
 ---
 
@@ -42,20 +53,18 @@ Traditional FPV drones rely entirely on pilot visual feedback for obstacle avoid
 | Obstacle Detection Rate | 90% |
 | Response Latency | 80–100 ms |
 | Operating Environment | GPS-denied indoor/outdoor |
-| Platform Weight Impact | Minimal |
+| Alert Levels | WARNING + CRITICAL |
 
 ---
 
 ## 🗂️ Repository Structure
 
 ```
-├── src/
-│   └── obstacle_detection.ino   # Main sensor fusion code
-├── docs/
-│   ├── report.pdf               # Full project report
-│   ├── paper.pdf                # Conference paper (ATiGB 2026)
-│   └── poster.pdf               # Poster presentation
-└── demo2_innovista.mp4          # Live flight demo
+├── obstacle_detection.ino           # Sensor fusion code with graduated alerts
+├── demo_college.mp4                 # Live flight demo
+├── project_explanation.mp4          # Department seminar presentation
+├── Lidar_Report.docx                # Full project report
+└── LiDAR_FPVD_PilotAssist_ATIGB2026F.pdf  # Conference paper (ATiGB 2026)
 ```
 
 ---
