@@ -6,8 +6,7 @@
 
 ## 📹 Demo
 
-https://github.com/Dhrxv27/Lidar-pilot-assist-for-FPV-drones/raw/main/demo2_innovista.mp4
-
+https://github.com/Dhrxv27/Lidar-pilot-assist-for-FPV-drones/raw/main/demo_college.mp4
 ---
 
 ## 🔍 Overview
